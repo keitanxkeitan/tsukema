@@ -100,7 +100,8 @@
   if (conn_) {
     NSLog(@"NSURLConnection create success");
     response_ = [NSMutableString string];
-    indicator_ = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicator_ = 
+            [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     indicator_.frame = CGRectMake(135.0, 215.0f, 50.0f, 50.0f);
     [self.view addSubview:indicator_];
     [indicator_ startAnimating];
@@ -156,9 +157,9 @@
       NSString *identity = (NSString *)[attributeDict objectForKey:@"id"];
       if ([identity hasPrefix:@"F"]) {
         layer.backgroundColor = [UIColor yellowColor].CGColor;
-      } else if ([identity hasPrefix:@"EL"]) {
+      } else if ([identity hasPrefix:@"E"]) {
         layer.backgroundColor = [UIColor whiteColor].CGColor;
-      } else if ([identity hasPrefix:@"BR"]) {
+      } else if ([identity hasPrefix:@"B"]) {
         layer.backgroundColor = [UIColor blackColor].CGColor;
       } else if ([identity hasPrefix:@"M"]) {
         layer.backgroundColor = [UIColor purpleColor].CGColor;
